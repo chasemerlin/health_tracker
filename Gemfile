@@ -40,4 +40,5 @@ gem 'spring',        group: :development
 
 gem 'devise'
 gem 'pry'
+gem 'twilio-ruby', '~> 3.12'
 

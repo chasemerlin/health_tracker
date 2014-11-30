@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'twilio/sms'
+
   resources :self_evaluations
 
   get 'pages/welcome'
