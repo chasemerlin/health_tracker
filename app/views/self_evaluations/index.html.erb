@@ -1,0 +1,49 @@
+<h1>Listing self_evaluations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Rating</th>
+      <th>Drink</th>
+      <th>Smoke</th>
+      <th>Worked out</th>
+      <th>Meds</th>
+      <th>Comments</th>
+      <th>Hours slept</th>
+      <th>Breakfast</th>
+      <th>Lunch</th>
+      <th>Dinner</th>
+      <th>Snacks</th>
+      <th>Exercise</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @self_evaluations.each do |self_evaluation| %>
+      <tr>
+        <td><%= self_evaluation.rating %></td>
+        <td><%= self_evaluation.drink %></td>
+        <td><%= self_evaluation.smoke %></td>
+        <td><%= self_evaluation.worked_out %></td>
+        <td><%= self_evaluation.meds %></td>
+        <td><%= self_evaluation.comments %></td>
+        <td><%= self_evaluation.hours_slept %></td>
+        <td><%= self_evaluation.breakfast %></td>
+        <td><%= self_evaluation.lunch %></td>
+        <td><%= self_evaluation.dinner %></td>
+        <td><%= self_evaluation.snacks_text %></td>
+        <td><%= self_evaluation.exercise %></td>
+        <td><%= self_evaluation.user.email %></td>
+        <td><%= link_to 'Show', self_evaluation %></td>
+        <td><%= link_to 'Edit', edit_self_evaluation_path(self_evaluation) %></td>
+        <td><%= link_to 'Destroy', self_evaluation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Self evaluation', new_self_evaluation_path %>

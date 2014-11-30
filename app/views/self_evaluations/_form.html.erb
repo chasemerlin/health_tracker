@@ -1,0 +1,65 @@
+<%= form_for(@self_evaluation) do |f| %>
+  <% if @self_evaluation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@self_evaluation.errors.count, "error") %> prohibited this self_evaluation from being saved:</h2>
+
+      <ul>
+      <% @self_evaluation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :rating %><br>
+    <%= f.text_field :rating %>
+  </div>
+  <div class="field">
+    <%= f.label :drink %><br>
+    <%= f.check_box :drink %>
+  </div>
+  <div class="field">
+    <%= f.label :smoke %><br>
+    <%= f.check_box :smoke %>
+  </div>
+  <div class="field">
+    <%= f.label :worked_out %><br>
+    <%= f.check_box :worked_out %>
+  </div>
+  <div class="field">
+    <%= f.label :meds %><br>
+    <%= f.check_box :meds %>
+  </div>
+  <div class="field">
+    <%= f.label :comments %><br>
+    <%= f.text_area :comments %>
+  </div>
+  <div class="field">
+    <%= f.label :hours_slept %><br>
+    <%= f.text_field :hours_slept %>
+  </div>
+  <div class="field">
+    <%= f.label :breakfast %><br>
+    <%= f.text_area :breakfast %>
+  </div>
+  <div class="field">
+    <%= f.label :lunch %><br>
+    <%= f.text_area :lunch %>
+  </div>
+  <div class="field">
+    <%= f.label :dinner %><br>
+    <%= f.text_area :dinner %>
+  </div>
+  <div class="field">
+    <%= f.label :snacks_text %><br>
+    <%= f.text_field :snacks_text %>
+  </div>
+  <div class="field">
+    <%= f.label :exercise %><br>
+    <%= f.text_area :exercise %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

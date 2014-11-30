@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @self_evaluation.rating %>
+</p>
+
+<p>
+  <strong>Drink:</strong>
+  <%= @self_evaluation.drink %>
+</p>
+
+<p>
+  <strong>Smoke:</strong>
+  <%= @self_evaluation.smoke %>
+</p>
+
+<p>
+  <strong>Worked out:</strong>
+  <%= @self_evaluation.worked_out %>
+</p>
+
+<p>
+  <strong>Meds:</strong>
+  <%= @self_evaluation.meds %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @self_evaluation.comments %>
+</p>
+
+<p>
+  <strong>Hours slept:</strong>
+  <%= @self_evaluation.hours_slept %>
+</p>
+
+<p>
+  <strong>Breakfast:</strong>
+  <%= @self_evaluation.breakfast %>
+</p>
+
+<p>
+  <strong>Lunch:</strong>
+  <%= @self_evaluation.lunch %>
+</p>
+
+<p>
+  <strong>Dinner:</strong>
+  <%= @self_evaluation.dinner %>
+</p>
+
+<p>
+  <strong>Snacks text:</strong>
+  <%= @self_evaluation.snacks_text %>
+</p>
+
+<p>
+  <strong>Exercise:</strong>
+  <%= @self_evaluation.exercise %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @self_evaluation.user.email %>
+</p>
+
+<%= link_to 'Edit', edit_self_evaluation_path(@self_evaluation) %> |
+<%= link_to 'Back', self_evaluations_path %>
