@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'receive_text/index'
+
   get 'twilio/sms'
 
   resources :self_evaluations
