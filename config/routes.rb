@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'receive_text/index'
+  post 'receive_text/index'
 
   get 'twilio/sms'
 
