@@ -1,7 +1,8 @@
 class CreateSelfEvaluations < ActiveRecord::Migration
   def change
     create_table :self_evaluations do |t|
-      t.integer :rating
+      t.integer :mood_rating
+      t.integer :energy_rating
       t.boolean :drink
       t.boolean :smoke
       t.boolean :worked_out

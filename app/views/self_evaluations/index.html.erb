@@ -3,7 +3,8 @@
 <table>
   <thead>
     <tr>
-      <th>Rating</th>
+      <th>Mood Rating</th>
+      <th>Energy Rating</th>
       <th>Drink</th>
       <th>Smoke</th>
       <th>Worked out</th>
@@ -23,7 +24,8 @@
   <tbody>
     <% @self_evaluations.each do |self_evaluation| %>
       <tr>
-        <td><%= self_evaluation.rating %></td>
+        <td><%= self_evaluation.mood_rating %></td>
+        <td><%= self_evaluation.energy_rating %></td>
         <td><%= self_evaluation.drink %></td>
         <td><%= self_evaluation.smoke %></td>
         <td><%= self_evaluation.worked_out %></td>
