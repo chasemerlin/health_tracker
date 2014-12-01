@@ -1,8 +1,9 @@
 class ReceiveTextController < ApplicationController
   def index
-    message_body = params["Body"]
+    @message_body = params["Body"]
     from_number = params["From"]
  
-    SMSLogger.log_text_message from_number, message_body
+    new_evaluation = SelfEvaluation.new()
+    new_evaluation.comments = message_body
   end
 end
