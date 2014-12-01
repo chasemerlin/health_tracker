@@ -9,9 +9,10 @@ class TwilioController < ApplicationController
     auth_token = 'ecc8b503545632c45a6d343be4d41cae'
     # set up a client to talk to the Twilio REST API
     @client = Twilio::REST::Client.new account_sid, auth_token
+    # To Chase
     @client.messages.create(
         from: '+1813644-8706',
-        to: '+18137167850',
+        to: '+18134688604',
         body: 'Hey there!'
       )
   end
