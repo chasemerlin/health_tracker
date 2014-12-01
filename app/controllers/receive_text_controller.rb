@@ -1,4 +1,6 @@
 class ReceiveTextController < ApplicationController
+  skip_before_action :verify_authenticity_token
+
   def index
     @message_body = params["Body"] if params["Body"]
     from_number = params["From"]
