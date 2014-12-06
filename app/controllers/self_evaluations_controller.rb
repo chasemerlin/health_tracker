@@ -7,8 +7,6 @@ class SelfEvaluationsController < ApplicationController
   respond_to :html
 
   def index
-    redis = Redis.new
-    a = Resque.new
     @self_evaluations = SelfEvaluation.all
     respond_with(@self_evaluations)
   end
