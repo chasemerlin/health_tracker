@@ -39,7 +39,7 @@
         <td><%= self_evaluation.dinner %></td>
         <td><%= self_evaluation.snacks_text %></td>
         <td><%= self_evaluation.exercise %></td>
-        <td><%= self_evaluation.user.email unless self_evaluation.user.nil? %></td>
+        <td><%= self_evaluation.user.email %></td>
         <td><%= self_evaluation.user.created_at.strftime("%d %b. %Y") %></td>
         <td><%= link_to 'Show', self_evaluation %></td>
         <td><%= link_to 'Edit', edit_self_evaluation_path(self_evaluation) %></td>
