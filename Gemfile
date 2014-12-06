@@ -48,5 +48,9 @@ gem 'devise'
 gem 'pry'
 gem 'twilio-ruby', '~> 3.12'
 gem 'rails_12factor', group: :production
+gem 'bootstrap-sass', '~> 3.3.1'
+gem 'autoprefixer-rails'
+gem "font-awesome-rails"
+gem 'whenever', :require => false
 
 

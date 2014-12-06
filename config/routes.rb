@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :views
+  devise_for :admins
   post 'receive_text/index'
 
   get 'twilio/sms'

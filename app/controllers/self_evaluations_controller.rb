@@ -1,4 +1,5 @@
 class SelfEvaluationsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_self_evaluation, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
@@ -29,6 +30,7 @@ class SelfEvaluationsController < ApplicationController
 
   def update
     @self_evaluation.update(self_evaluation_params)
+    binding.pry
     respond_with(@self_evaluation)
   end
 
@@ -43,6 +45,6 @@ class SelfEvaluationsController < ApplicationController
     end
 
     def self_evaluation_params
-      params.require(:self_evaluation).permit(:rating, :drink, :smoke, :worked_out, :meds, :comments, :time_logged, :hours_slept, :breakfast, :lunch, :dinner, :snacks_text, :exercise)
+      params.require(:self_evaluation).permit(:mood_rating, :energy_rating, :drink, :smoke, :worked_out, :meds, :comments, :time_logged, :hours_slept, :breakfast, :lunch, :dinner, :snacks_text, :exercise)
     end
 end

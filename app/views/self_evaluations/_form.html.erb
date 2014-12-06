@@ -20,19 +20,39 @@
   </div>
   <div class="field">
     <%= f.label :drink %><br>
-    <%= f.check_box :drink %>
+    <label class="radio-inline" for="self_evaluation_drink">
+      <input type="radio" name="self_evaluation[drink]" id="self_evaluation_drink" value="1"> Yes
+      </label>
+      <label class="radio-inline">
+      <input type="radio" name="self_evaluation[drink]" id="self_evaluation_drink" value="0"> No
+    </label>
   </div>
   <div class="field">
     <%= f.label :smoke %><br>
-    <%= f.check_box :smoke %>
+    <label class="radio-inline" for="self_evaluation_smoke">
+      <input type="radio" name="self_evaluation[smoke]" id="self_evaluation_smoke" value="1"> Yes
+      </label>
+      <label class="radio-inline">
+      <input type="radio" name="self_evaluation[smoke]" id="self_evaluation_smoke" value="0"> No
+    </label>
   </div>
   <div class="field">
     <%= f.label :worked_out %><br>
-    <%= f.check_box :worked_out %>
+    <label class="radio-inline" for="self_evaluation_worked_out">
+      <input type="radio" name="self_evaluation[worked_out]" id="self_evaluation_worked_out" value="1"> Yes
+      </label>
+      <label class="radio-inline">
+      <input type="radio" name="self_evaluation[worked_out]" id="self_evaluation_worked_out" value="0"> No
+    </label>
   </div>
   <div class="field">
     <%= f.label :meds %><br>
-    <%= f.check_box :meds %>
+    <label class="radio-inline" for="self_evaluation_meds">
+      <input type="radio" name="self_evaluation[meds]" id="self_evaluation_meds" value="1"> Yes
+      </label>
+      <label class="radio-inline">
+      <input type="radio" name="self_evaluation[meds]" id="self_evaluation_meds" value="0"> No
+    </label>
   </div>
   <div class="field">
     <%= f.label :comments %><br>
