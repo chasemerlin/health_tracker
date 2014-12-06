@@ -52,5 +52,6 @@ gem 'bootstrap-sass', '~> 3.3.1'
 gem 'autoprefixer-rails'
 gem "font-awesome-rails"
 gem 'whenever', :require => false
+gem "resque"
 
 
