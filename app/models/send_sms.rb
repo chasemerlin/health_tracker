@@ -13,5 +13,10 @@ class SendSms < ActiveRecord::Base
         to: '+18134688604',
         body: 'Enter your current mood (1-10) and your current energy (1-10) separated by a comma. Example: 7,6'
       )
+    @client.messages.create(
+        from: '+1813644-8706',
+        to: '+18137167850',
+        body: 'Enter your current mood (1-10) and your current energy (1-10) separated by a comma. Example: 7,6'
+      )
   end
 end
