@@ -1,6 +1,11 @@
+*= require animate
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
 @import "style";
 @import "responsive";
+
+#container {
+  padding-top: 8%;
+}
 
