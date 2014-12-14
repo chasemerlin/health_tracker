@@ -1,5 +1,3 @@
-require "redis"
-require "resque"
 class SelfEvaluationsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_self_evaluation, only: [:show, :edit, :update, :destroy]

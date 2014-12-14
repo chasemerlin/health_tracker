@@ -5,12 +5,12 @@
         <div class="tiles blue added-margin">
           <div class="tiles-body">
             <div class="controller"> <a href="javascript:;" class="reload"></a> <a href="javascript:;" class="remove"></a> </div>
-            <div class="tiles-title"> AVERAGE MOOD </div>
-            <div class="heading"> <span class="animate-number" data-value="26.8" data-animation-duration="1200"><%= @mood_avg %></span> </div>
+            <div class="tiles-title"> AVERAGE MOOD IN PAST WEEK </div>
+            <div class="heading"> <span class="animate-number" data-value=<%="#{@mood_avg_as_percent}" %> data-animation-duration="1200"><%= @mood_avg %></span> </div>
             <div class="progress transparent progress-small no-radius">
-              <div class="progress-bar progress-bar-white animate-progress-bar" data-percentage="26.8%"></div>
+              <div class="progress-bar progress-bar-white animate-progress-bar" data-percentage=<%= "#{@mood_avg_as_percent}%" %> style=<%= "width:#{@mood_avg_as_percent}%;"%>></div>
             </div>
-            <div class="description"><i class="icon-custom-up"></i><span class="text-white mini-description ">&nbsp; 4% higher <span class="blend">than last month</span></span></div>
+            <div class="description"><i class="icon-custom-up"></i><span class="text-white mini-description ">&nbsp; <%= @mood_avg_7_to_14_days_ago %> <span class="blend">last week</span></span></div>
           </div>
         </div>
       </div>
@@ -18,14 +18,14 @@
         <div class="tiles purple added-margin">
           <div class="tiles-body">
             <div class="controller"> <a href="javascript:;" class="reload"></a> <a href="javascript:;" class="remove"></a> </div>
-            <div class="tiles-title"> TODAY’S FEEDBACKS </div>
+            <div class="tiles-title"> AVERAGE ENERGY IN PAST WEEK </div>
             <div class="row-fluid">
-              <div class="heading"> <span class="animate-number" data-value="1600" data-animation-duration="700">0</span> </div>
+              <div class="heading"> <span class="animate-number" data-value=<%="#{@energy_avg_as_percent}" %> data-animation-duration="700"><%= @energy_avg %></span> </div>
               <div class="progress transparent progress-white progress-small no-radius">
-                <div class="progress-bar progress-bar-white animate-progress-bar" data-percentage="12%"></div>
+                <div class="progress-bar progress-bar-white animate-progress-bar" data-percentage=<%="#{@energy_avg_as_percent}%" %> style=<%= "width:#{@energy_avg_as_percent}%;"%>></div>
               </div>
             </div>
-            <div class="description"><i class="icon-custom-up"></i><span class="text-white mini-description ">&nbsp; 3% higher <span class="blend">than last month</span></span></div>
+            <div class="description"><i class="icon-custom-up"></i><span class="text-white mini-description ">&nbsp; <%= @energy_avg_7_to_14_days_ago %> <span class="blend">last week</span></span></div>
           </div>
         </div>
       </div>
